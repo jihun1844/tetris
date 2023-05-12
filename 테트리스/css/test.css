@@ -1,0 +1,100 @@
+/* css초기화 */
+*{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style: none; 
+}
+/* 넘치는 부분에 스크롤이 안생기게 */
+body{
+  height: 100%;
+  overflow: hidden;
+}
+.game-text{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  left: 0;
+  top: 0;
+  color: #fff;
+  font-size: 50px;
+}
+.game-text > button{
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: salmon;
+  border: none;
+  cursor: pointer;
+}
+.score{
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 2rem;
+}
+/* .scoer-up{
+  font-size: 50px;
+  color: #ca46ff;
+  bottom:150%;
+  transition: all.35s;
+} */
+/* 실제 테트리스가 들어가는 곳 
+ul = 행 , li = 열  테트리스 2차원 배열*/
+.playground > ul{    /*playground 안에 있는 ul에 넣는식*/
+  border: 1px solid #333;
+  width: 310px;
+  margin: 0 auto;
+}
+/* 테트리스 1칸당 크기 */
+.playground > ul > li{
+  width: 100%;
+  height: 25px;
+}
+.playground > ul > li > ul {
+  display: flex; /*ul은 옆으로 나열되게 함*/
+}
+.playground > ul > li > ul > li {/*ul안에 들어있는 작은 li들 즉 각각의 메트릭스*/
+  width: 25px;
+  height: 25px;
+  outline: 1px solid rgb(222, 222, 222);
+}
+.tree{
+  background: #f56363;
+}
+.bar{
+  background: #ffc971;
+}
+.zee{
+  background: #80ead1;
+}
+.elLeft{
+  background: #a4fd78;
+}
+.elRight{
+  background: rgb(150, 171, 255);
+}
+.square{
+  background: #ff92f2;
+}
+.zee_opposite{
+  background: rgb(197, 135, 255);
+}
+
+
+.img1{
+  position: absolute;
+  left: 10px;
+  top: 100px;
+  max-width: 300;
+}
+.img2{
+  position: absolute;
+  left: 40px;
+  top: 320px;
+  max-width: 300;
+}
